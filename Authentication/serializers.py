@@ -27,7 +27,7 @@ class CustomUserCreationSerializer(serializers.ModelSerializer):
 
         return account
     
-class LoginSerializer(serializers.Serializer):
+class LoginSerializer(serializers.ModelSerializer):
     username = serializers.CharField(max_length = 50)
     password = serializers.CharField(write_only=True)
 

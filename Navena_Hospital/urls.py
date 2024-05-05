@@ -21,12 +21,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('Authentication.urls')),
-    path('user/',include('appointment.urls')),
-    path('user/',include('doctor.urls')),
-    path('user/',include('patient.urls')),
-    path('user/',include('contact_us.urls')),
-    path('user/',include('service.urls')),
+    path('user/',include('Authentication.urls')),
+    path('',include('appointment.urls')),
+    path('doctor/',include('doctor.urls')),
+    path('patient/',include('patient.urls')),
+    path('contact_us/',include('contact_us.urls')),
+    path('service/',include('service.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
